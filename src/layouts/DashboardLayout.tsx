@@ -37,11 +37,11 @@ const DashboardLayout = ({ children, onLogout }: DashboardLayoutProps) => {
         <button
           onClick={onLogout}
           style={{
-            backgroundColor: "#374151",
+            backgroundColor: "#FF69B4",
             color: "#ffffff",
             fontWeight: "600",
             padding: "0.5rem 1rem",
-            borderRadius: "8px",
+            borderRadius: "15px",
             border: "none",
             cursor: "pointer",
             fontSize: "0.875rem",
