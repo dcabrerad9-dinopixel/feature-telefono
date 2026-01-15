@@ -2,13 +2,204 @@
 @tailwind components;
 @tailwind utilities;
 
+/* ============================================
+   VARIABLES CSS - PALETA DE COLORES
+   ============================================
+   Para cambiar los colores para otro cliente, 
+   simplemente modifica los valores en :root 
+   (tema light) y [data-theme="dark"] (tema dark)
+   ============================================ */
+
+:root {
+  /* Colores principales */
+  --color-primary: #111827;          /* Gray-900 */
+  --color-primary-hover: #1f2937;    /* Gray-800 */
+  --color-primary-light: #374151;    /* Gray-700 */
+  
+  /* Fondos */
+  --color-background: #f9fafb;       /* Gray-50 */
+  --color-surface: #ffffff;          /* White */
+  --color-surface-secondary: #f3f4f6; /* Gray-100 */
+  
+  /* Textos */
+  --color-text-primary: #111827;     /* Gray-900 */
+  --color-text-secondary: #4b5563;   /* Gray-600 */
+  --color-text-muted: #6b7280;       /* Gray-500 */
+  --color-text-inverse: #ffffff;     /* White */
+  
+  /* Bordes */
+  --color-border: #e5e7eb;           /* Gray-200 */
+  --color-border-hover: #d1d5db;     /* Gray-300 */
+  --color-border-focus: #111827;     /* Gray-900 */
+  
+  /* Estados */
+  --color-hover: #f3f4f6;            /* Gray-100 */
+  --color-focus-ring: #4b5563;       /* Gray-600 */
+  --color-focus-ring-offset: #ffffff; /* White */
+  
+  /* Avatares y elementos especiales */
+  --color-avatar-bg: #111827;        /* Gray-900 */
+  --color-avatar-text: #ffffff;      /* White */
+}
+
+/* Tema Dark */
+[data-theme="dark"] {
+  /* Colores principales */
+  --color-primary: #f9fafb;          /* Gray-50 */
+  --color-primary-hover: #e5e7eb;    /* Gray-200 */
+  --color-primary-light: #d1d5db;    /* Gray-300 */
+  
+  /* Fondos */
+  --color-background: #111827;       /* Gray-900 */
+  --color-surface: #1f2937;          /* Gray-800 */
+  --color-surface-secondary: #374151; /* Gray-700 */
+  
+  /* Textos */
+  --color-text-primary: #f9fafb;     /* Gray-50 */
+  --color-text-secondary: #d1d5db;   /* Gray-300 */
+  --color-text-muted: #9ca3af;       /* Gray-400 */
+  --color-text-inverse: #111827;     /* Gray-900 */
+  
+  /* Bordes */
+  --color-border: #374151;           /* Gray-700 */
+  --color-border-hover: #4b5563;     /* Gray-600 */
+  --color-border-focus: #f9fafb;     /* Gray-50 */
+  
+  /* Estados */
+  --color-hover: #374151;            /* Gray-700 */
+  --color-focus-ring: #9ca3af;       /* Gray-400 */
+  --color-focus-ring-offset: #1f2937; /* Gray-800 */
+  
+  /* Avatares y elementos especiales */
+  --color-avatar-bg: #f9fafb;        /* Gray-50 */
+  --color-avatar-text: #111827;      /* Gray-900 */
+}
+
 @layer base {
   body {
-    @apply m-0 min-w-[320px] min-h-screen bg-gray-50 text-gray-900;
+    margin: 0;
+    min-width: 320px;
+    min-height: 100vh;
     font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+    background-color: var(--color-background);
+    color: var(--color-text-primary);
   }
 
   #root {
-    @apply w-full min-h-screen;
+    width: 100%;
+    min-height: 100vh;
+  }
+}
+
+/* ============================================
+   CLASES CSS PERSONALIZADAS
+   ============================================
+   Usa estas clases en lugar de las clases de 
+   Tailwind para aprovechar el sistema de temas
+   ============================================ */
+
+@layer components {
+  /* Fondos */
+  .bg-theme-background {
+    background-color: var(--color-background);
+  }
+  
+  .bg-theme-surface {
+    background-color: var(--color-surface);
+  }
+  
+  .bg-theme-surface-secondary {
+    background-color: var(--color-surface-secondary);
+  }
+  
+  .bg-theme-primary {
+    background-color: var(--color-primary);
+  }
+  
+  .bg-theme-primary-hover:hover {
+    background-color: var(--color-primary-hover);
+  }
+  
+  /* Textos */
+  .text-theme-primary {
+    color: var(--color-text-primary);
+  }
+  
+  .text-theme-secondary {
+    color: var(--color-text-secondary);
+  }
+  
+  .text-theme-muted {
+    color: var(--color-text-muted);
+  }
+  
+  .text-theme-inverse {
+    color: var(--color-text-inverse);
+  }
+  
+  /* Bordes */
+  .border-theme {
+    border-color: var(--color-border);
+  }
+  
+  .border-theme-hover:hover {
+    border-color: var(--color-border-hover);
+  }
+  
+  .border-theme-focus:focus {
+    border-color: var(--color-border-focus);
+  }
+  
+  /* Estados hover */
+  .hover-theme:hover {
+    background-color: var(--color-hover);
+  }
+  
+  .hover-theme-text:hover {
+    color: var(--color-text-primary);
+  }
+  
+  /* Focus ring */
+  .focus-theme:focus {
+    outline: 2px solid var(--color-focus-ring);
+    outline-offset: 2px;
+  }
+  
+  .focus-theme-ring:focus-within {
+    border-color: var(--color-border-focus);
+    box-shadow: 0 0 0 2px var(--color-focus-ring);
+  }
+  
+  .input-theme::placeholder {
+    color: var(--color-text-muted);
+  }
+  
+  /* Avatares */
+  .bg-theme-avatar {
+    background-color: var(--color-avatar-bg);
+    color: var(--color-avatar-text);
+  }
+  
+  /* Botones */
+  .btn-theme-primary {
+    background-color: var(--color-primary);
+    color: var(--color-text-inverse);
+  }
+  
+  .btn-theme-primary:hover {
+    background-color: var(--color-primary-hover);
+  }
+  
+  /* Iconos */
+  .icon-theme {
+    color: var(--color-text-secondary);
+  }
+  
+  .icon-theme:hover {
+    color: var(--color-text-primary);
+  }
+  
+  .icon-theme svg {
+    color: inherit;
   }
 }

@@ -6,12 +6,15 @@ interface InputTextProps {
 
 const InputText = ({ placeholder, type, onChange }: InputTextProps) => {
   return (
-    <div className="flex items-center border border-gray-300 rounded-lg px-3 py-2 focus-within:border-gray-900 focus-within:ring-2 focus-within:ring-gray-600 focus-within:ring-offset-0 transition-all duration-200">
+    <div className="flex items-center border border-theme rounded-lg px-3 py-2 transition-all duration-200 focus-theme-ring">
       <input
         type={type}
         placeholder={placeholder}
         onChange={(e) => onChange(e.target.value)}
-        className="w-full border-none outline-none text-base text-gray-900 bg-transparent placeholder-gray-500"
+        className="w-full border-none outline-none text-base text-theme-primary bg-transparent input-theme"
+        style={{ 
+          backgroundColor: 'transparent'
+        }}
       />
     </div>
   );

@@ -16,10 +16,10 @@ const LoginLayout = () => {
   };
 
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gray-50 px-4">
+    <div className="min-h-screen flex items-center justify-center bg-theme-background px-4">
       <div className="w-full max-w-md">
-        <div className="bg-white rounded-2xl shadow-lg p-8 border border-gray-200">
-          <h1 className="text-4xl font-bold text-gray-900 mb-8 text-center">
+        <div className="bg-theme-surface rounded-2xl shadow-lg p-8 border border-theme">
+          <h1 className="text-4xl font-bold text-theme-primary mb-8 text-center">
             Ingresar
           </h1>
 
@@ -37,7 +37,7 @@ const LoginLayout = () => {
 
             <button
               type="submit"
-              className="w-full rounded-lg bg-gray-900 text-white font-medium py-3 px-4 transition-colors duration-200 hover:bg-gray-800 focus:outline-none focus:ring-2 focus:ring-gray-900 focus:ring-offset-2 disabled:opacity-50 disabled:cursor-not-allowed"
+              className="w-full rounded-lg bg-theme-primary text-theme-inverse font-medium py-3 px-4 transition-colors duration-200 bg-theme-primary-hover focus-theme disabled:opacity-50 disabled:cursor-not-allowed"
               disabled={!username || !password}
             >
               Ingresar
