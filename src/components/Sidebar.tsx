@@ -4,6 +4,7 @@ import {
   Cog6ToothIcon,
   DocumentChartBarIcon,
   BuildingStorefrontIcon,
+  BoltIcon,
 } from "@heroicons/react/24/outline";
 import { ReactElement } from "react";
 import { Link, useLocation } from "react-router-dom";
@@ -47,6 +48,12 @@ const Sidebar = ({ isCollapsed }: SidebarProps) => {
       icon: <DocumentChartBarIcon className="w-5 h-5" />,
       collapsedIcon: <DocumentChartBarIcon className="w-7 h-7" />,
     },
+    {
+      label: "Diego",
+      path: "/diego",
+      icon: <BoltIcon className="w-5 h-5" />,
+      collapsedIcon: <BoltIcon className="w-7 h-7" />,
+    },
   ];
 
   return (
@@ -56,7 +63,10 @@ const Sidebar = ({ isCollapsed }: SidebarProps) => {
       }`}
     >
       <div>
-        <div className="p-3 flex items-center gap-2">
+        <Link 
+          to="/dashboard" 
+          className="p-3 flex items-center gap-2 hover-theme transition-colors duration-200 cursor-pointer"
+        >
           <BuildingStorefrontIcon
             className={`transition-all duration-300 ${
               isCollapsed ? "w-8 h-8 mx-auto" : "w-7 h-7"
@@ -72,7 +82,7 @@ const Sidebar = ({ isCollapsed }: SidebarProps) => {
           >
             Negocio Virtual
           </h2>
-        </div>
+        </Link>
 
         <nav className="space-y-1">
           {menuItems.map((item, index) => {
