@@ -11,14 +11,14 @@ export const useTheme = () => {
 
   useEffect(() => {
     const root = document.documentElement;
-    
+
     // Aplicar el tema al elemento HTML
     if (theme === "dark") {
       root.setAttribute("data-theme", "dark");
     } else {
       root.removeAttribute("data-theme");
     }
-    
+
     // Guardar en localStorage
     localStorage.setItem("theme", theme);
   }, [theme]);

@@ -12,8 +12,8 @@ const InputText = ({ placeholder, type, onChange }: InputTextProps) => {
         placeholder={placeholder}
         onChange={(e) => onChange(e.target.value)}
         className="w-full border-none outline-none text-base text-theme-primary bg-transparent input-theme"
-        style={{ 
-          backgroundColor: 'transparent'
+        style={{
+          backgroundColor: "transparent",
         }}
       />
     </div>
