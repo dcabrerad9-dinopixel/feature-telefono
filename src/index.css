@@ -11,68 +11,80 @@
    ============================================ */
 
 :root {
-  /* Colores principales */
-  --color-primary: #111827;          /* Gray-900 */
-  --color-primary-hover: #1f2937;    /* Gray-800 */
-  --color-primary-light: #374151;    /* Gray-700 */
+  /* Colores principales - Azul Índigo Elegante */
+  --color-primary: #4f46e5;          /* Indigo-600 - Profesional y confiable */
+  --color-primary-hover: #4338ca;    /* Indigo-700 */
+  --color-primary-light: #6366f1;    /* Indigo-500 */
+  
+  /* Acentos vivos */
+  --color-accent: #10b981;           /* Emerald-500 - Éxito/CTA */
+  --color-accent-hover: #059669;     /* Emerald-600 */
+  --color-warning: #f59e0b;          /* Amber-500 */
+  --color-danger: #ef4444;           /* Red-500 */
   
   /* Fondos */
-  --color-background: #f9fafb;       /* Gray-50 */
+  --color-background: #f8fafc;       /* Slate-50 */
   --color-surface: #ffffff;          /* White */
-  --color-surface-secondary: #f3f4f6; /* Gray-100 */
+  --color-surface-secondary: #f1f5f9; /* Slate-100 */
   
   /* Textos */
-  --color-text-primary: #111827;     /* Gray-900 */
-  --color-text-secondary: #4b5563;   /* Gray-600 */
-  --color-text-muted: #6b7280;       /* Gray-500 */
+  --color-text-primary: #0f172a;     /* Slate-900 */
+  --color-text-secondary: #475569;   /* Slate-600 */
+  --color-text-muted: #64748b;       /* Slate-500 */
   --color-text-inverse: #ffffff;     /* White */
   
   /* Bordes */
-  --color-border: #e5e7eb;           /* Gray-200 */
-  --color-border-hover: #d1d5db;     /* Gray-300 */
-  --color-border-focus: #111827;     /* Gray-900 */
+  --color-border: #e2e8f0;           /* Slate-200 */
+  --color-border-hover: #cbd5e1;     /* Slate-300 */
+  --color-border-focus: #4f46e5;     /* Indigo-600 */
   
   /* Estados */
-  --color-hover: #f3f4f6;            /* Gray-100 */
-  --color-focus-ring: #4b5563;       /* Gray-600 */
+  --color-hover: #f1f5f9;            /* Slate-100 */
+  --color-focus-ring: #818cf8;       /* Indigo-400 */
   --color-focus-ring-offset: #ffffff; /* White */
   
   /* Avatares y elementos especiales */
-  --color-avatar-bg: #111827;        /* Gray-900 */
+  --color-avatar-bg: #4f46e5;        /* Indigo-600 */
   --color-avatar-text: #ffffff;      /* White */
 }
 
 /* Tema Dark */
 [data-theme="dark"] {
-  /* Colores principales */
-  --color-primary: #f9fafb;          /* Gray-50 */
-  --color-primary-hover: #e5e7eb;    /* Gray-200 */
-  --color-primary-light: #d1d5db;    /* Gray-300 */
+  /* Colores principales - Más brillantes en dark */
+  --color-primary: #6366f1;          /* Indigo-500 - Más visible */
+  --color-primary-hover: #4f46e5;    /* Indigo-600 */
+  --color-primary-light: #818cf8;    /* Indigo-400 */
   
-  /* Fondos */
-  --color-background: #111827;       /* Gray-900 */
-  --color-surface: #1f2937;          /* Gray-800 */
-  --color-surface-secondary: #374151; /* Gray-700 */
+  /* Acentos vivos - Mantenidos vibrantes */
+  --color-accent: #34d399;           /* Emerald-400 - Más brillante */
+  --color-accent-hover: #10b981;     /* Emerald-500 */
+  --color-warning: #fbbf24;          /* Amber-400 */
+  --color-danger: #f87171;           /* Red-400 */
   
-  /* Textos */
-  --color-text-primary: #f9fafb;     /* Gray-50 */
-  --color-text-secondary: #d1d5db;   /* Gray-300 */
-  --color-text-muted: #9ca3af;       /* Gray-400 */
-  --color-text-inverse: #111827;     /* Gray-900 */
+  /* Fondos oscuros */
+  --color-background: #0f172a;       /* Slate-900 */
+  --color-surface: #1e293b;          /* Slate-800 */
+  --color-surface-secondary: #334155; /* Slate-700 */
   
-  /* Bordes */
-  --color-border: #374151;           /* Gray-700 */
-  --color-border-hover: #4b5563;     /* Gray-600 */
-  --color-border-focus: #f9fafb;     /* Gray-50 */
+  /* Textos claros */
+  --color-text-primary: #f8fafc;     /* Slate-50 */
+  --color-text-secondary: #cbd5e1;   /* Slate-300 */
+  --color-text-muted: #94a3b8;       /* Slate-400 */
+  --color-text-inverse: #0f172a;     /* Slate-900 */
+  
+  /* Bordes oscuros */
+  --color-border: #334155;           /* Slate-700 */
+  --color-border-hover: #475569;     /* Slate-600 */
+  --color-border-focus: #6366f1;     /* Indigo-500 */
   
   /* Estados */
-  --color-hover: #374151;            /* Gray-700 */
-  --color-focus-ring: #9ca3af;       /* Gray-400 */
-  --color-focus-ring-offset: #1f2937; /* Gray-800 */
+  --color-hover: #334155;            /* Slate-700 */
+  --color-focus-ring: #818cf8;       /* Indigo-400 */
+  --color-focus-ring-offset: #1e293b; /* Slate-800 */
   
   /* Avatares y elementos especiales */
-  --color-avatar-bg: #f9fafb;        /* Gray-50 */
-  --color-avatar-text: #111827;      /* Gray-900 */
+  --color-avatar-bg: #6366f1;        /* Indigo-500 */
+  --color-avatar-text: #ffffff;      /* White */
 }
 
 @layer base {

@@ -1,6 +1,6 @@
-import { useState, FormEvent } from "react";
+import { FormEvent, useState } from "react";
+import TextField from "../components/TextField";
 import { useAuth } from "../hooks/useAuth";
-import InputText from "../components/InputText";
 
 const LoginLayout = () => {
   const { login, saveUser } = useAuth();
@@ -24,15 +24,19 @@ const LoginLayout = () => {
           </h1>
 
           <form onSubmit={handleSubmit} className="space-y-6">
-            <InputText
+            <TextField
+              label="Usuario"
+              variant="outlined"
               placeholder="Ingresa tu usuario"
               type="text"
-              onChange={setUsername}
+              onChange={(e) => setUsername(e.target.value)}
             />
-            <InputText
+            <TextField
+              label="Contraseña"
+              variant="outlined"
               placeholder="Ingresa tu contraseña"
               type="password"
-              onChange={setPassword}
+              onChange={(e) => setPassword(e.target.value)}
             />
 
             <button

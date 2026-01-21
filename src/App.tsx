@@ -8,6 +8,7 @@ import Usuarios from "./pages/Usuarios";
 import Configuracion from "./pages/Configuracion";
 import Reportes from "./pages/Reportes";
 import Diego from "./pages/Diego";
+import Componentes from "./pages/Componentes";
 
 const AppContent = () => {
   const { isAuthenticated } = useAuth();
@@ -25,6 +26,7 @@ const AppContent = () => {
         <Route path="configuracion" element={<Configuracion />} />
         <Route path="reportes" element={<Reportes />} />
         <Route path="diego" element={<Diego />} />
+        <Route path="componentes" element={<Componentes />} />
       </Route>
     </Routes>
   );
