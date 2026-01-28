@@ -11,6 +11,7 @@ import {
 import { ReactElement } from "react";
 import { Link, useLocation } from "react-router-dom";
 import Menu from "./Menu";
+import Accordion from "./Accordion";
 
 interface MenuItem {
   label: string;
@@ -164,6 +165,50 @@ const Sidebar = ({ isCollapsed }: SidebarProps) => {
         <hr className="my-4 border-theme" />
 
         <Menu items={menuItemsNuevo} isCollapsed={isCollapsed} />
+
+        <hr className="my-4 border-theme" />
+
+        {!isCollapsed && (
+            <Accordion
+              defaultOpen={0}
+              items={[
+                {
+                  title: "Ayuda",
+                  content: (
+                    <p>
+                      Enlaces a documentación, FAQs y soporte.
+                    </p>
+                  ),
+                },
+                {
+                  title: "Atajos",
+                  content: (
+                    <ul className="list-disc list-inside space-y-1">
+                      <li>Ctrl+K: búsqueda</li>
+                      <li>Ctrl+B: toggle sidebar</li>
+                    </ul>
+                  ),
+                },
+                {
+                  title: "Componentes",
+                  content: (
+                    <ul className="list-disc list-inside space-y-1">
+                      <li>TextField</li>
+                      <li>Button</li>
+                      <li>Input</li>
+                      <li>Select</li>
+                      <li>Checkbox</li>
+                      <li>Radio</li>
+                      <li>Switch</li>
+                      <li>DatePicker</li>
+                      <li>TimePicker</li>
+                    </ul>
+                  ),
+                },
+              ]}
+            />
+          
+        )}
 
       </div>
     </aside>
