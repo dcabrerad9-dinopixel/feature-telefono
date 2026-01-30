@@ -56,18 +56,30 @@ const Accordion = ({
               aria-expanded={isOpen}
               aria-controls={panelId}
               id={id}
-              className="flex w-full items-center justify-between gap-2 px-4 py-3 text-left text-theme-secondary hover-theme transition-colors duration-200 focus:outline-none"
+              className={`flex w-full items-center gap-2 text-theme-secondary hover-theme transition-colors duration-200 focus:outline-none ${
+                isCollapsed 
+                  ? "justify-center px-2 py-3" 
+                  : "justify-between px-4 py-3 text-left"
+              }`}
             >
               <span className="flex items-center gap-2">
                 <span className="mr-1" style={{ color: "var(--color-text-secondary)" }}>
                   {isCollapsed ? collapsedIcon : icon}
                 </span>
-                <span className="font-medium">{item.title}</span>
+                <span className={`font-medium transition-all duration-300 ${
+                  isCollapsed 
+                    ? "opacity-0 w-0 overflow-hidden" 
+                    : "opacity-100"
+                }`}>
+                  {item.title}
+                </span>
               </span>
-              {isOpen ? (
-                <ChevronRightIcon className="h-4 w-4 shrink-0 transition-transform duration-200 text-theme-secondary" />
-              ) : (
-                <ChevronDownIcon className="h-4 w-4 shrink-0 transition-transform duration-200 text-theme-secondary" />
+              {!isCollapsed && (
+                isOpen ? (
+                  <ChevronRightIcon className="h-4 w-4 shrink-0 transition-transform duration-200 text-theme-secondary" />
+                ) : (
+                  <ChevronDownIcon className="h-4 w-4 shrink-0 transition-transform duration-200 text-theme-secondary" />
+                )
               )}
             </button>
             <div
